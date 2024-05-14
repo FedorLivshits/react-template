@@ -1,10 +1,22 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ConfigProvider } from 'antd';
+import { ErrorBoundary } from './components';
+import { AuthProvider } from './context';
 
-// https://ant.design/docs/react/customize-theme
+const queryClient = new QueryClient();
+
 export const ProviderComponent = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  return <ConfigProvider theme={{}}>{children}</ConfigProvider>;
+  return (
+    <ConfigProvider theme={{}}>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </AuthProvider>
+      </QueryClientProvider>
+    </ConfigProvider>
+  );
 };

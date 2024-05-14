@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ProviderComponent } from './ProviderComponent';
-import { PrivateRoute, PublicRoute } from './Routes';
+import { PrivateRoute, PublicRoute } from './routes';
 import { ROUTES_URLS } from './constants';
 import './index.css';
 import { LoginPage, NotFoundPage } from './pages';

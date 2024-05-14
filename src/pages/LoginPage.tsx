@@ -1,6 +1,7 @@
 import { Form, Input, Button, Row } from 'antd';
 import styled from 'styled-components';
 import logo from '../assets/react.svg';
+import { useAuthService } from '../hooks';
 
 const LoginContainer = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const StyledForm = styled(Form)`
 `;
 
 export const LoginPage = () => {
+  const { signIn, isAuthLoading } = useAuthService();
   const [form] = Form.useForm();
   const onFinish = (values: unknown) => {
     console.log('Received values of form: ', values);
@@ -53,7 +55,13 @@ export const LoginPage = () => {
           <Input type="password" placeholder="Password" />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
+          <Button
+            type="primary"
+            htmlType="submit"
+            style={{ width: '100%' }}
+            onClick={signIn}
+            loading={isAuthLoading}
+          >
             Log in
           </Button>
         </Form.Item>
