@@ -1,9 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { ProviderComponent } from './ProviderComponent';
-import { PrivateRoute, PublicRoute } from './routes';
-import { ROUTES_URLS } from './constants';
 import './index.css';
-import { LoginPage, NotFoundPage } from './pages';
+import { LoginPage } from '@pages/LoginPage';
+import { NotFoundPage } from '@pages/NotFoundPage';
+import { PrivateRoute, PublicRoute } from '@shared/routes';
+import { ProviderComponent } from './ProviderComponent';
+import { ROUTES_URLS } from '@shared/constants';
 
 const { LOGIN, MAIN, NOT_FOUND } = ROUTES_URLS;
 

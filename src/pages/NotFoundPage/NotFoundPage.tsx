@@ -1,5 +1,5 @@
+import { AppLayout } from '@shared/components';
 import { Row, Typography } from 'antd';
-import { AppLayout } from '../components';
 
 export const NotFoundPage = () => {
   return (

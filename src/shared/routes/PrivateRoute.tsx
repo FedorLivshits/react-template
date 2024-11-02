@@ -1,7 +1,7 @@
+import { PageLoader } from '@shared/components';
+import { useAuthService } from '@shared/hooks';
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { PageLoader } from '../components';
-import { useAuthService } from '../hooks';
 
 interface PrivateRouteProps extends React.PropsWithChildren {}
 

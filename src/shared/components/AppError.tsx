@@ -1,5 +1,5 @@
+import { useAuthService } from '@shared/hooks';
 import { Button, Result } from 'antd';
-import { useAuthService } from '../hooks';
 
 export const AppError = () => {
   const { logout } = useAuthService();

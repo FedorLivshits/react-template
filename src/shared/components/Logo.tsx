@@ -1,5 +1,5 @@
+import { ReactIcon } from '@shared/assets';
 import { styled } from 'styled-components';
-import logo from '../assets/react.svg';
 
 const LogoWrapper = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const LogoWrapper = styled.div`
 export const Logo = () => {
   return (
     <LogoWrapper>
-      <img src={logo} alt="Logo" />
+      <img src={ReactIcon} alt="Logo" />
     </LogoWrapper>
   );
 };

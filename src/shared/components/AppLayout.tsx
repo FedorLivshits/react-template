@@ -1,7 +1,7 @@
 import { theme, Layout } from 'antd';
 import { styled } from 'styled-components';
-import { AppHeader } from './AppHeader';
 import { AppFooter } from './AppFooter';
+import { AppHeader } from './AppHeader';
 
 const { Content } = Layout;
 

@@ -1,7 +1,7 @@
+import { ReactIcon } from '@shared/assets';
+import { useAuthService } from '@shared/hooks';
 import { Form, Input, Button, Row } from 'antd';
 import styled from 'styled-components';
-import logo from '../assets/react.svg';
-import { useAuthService } from '../hooks';
 
 const LoginContainer = styled.div`
   display: flex;
@@ -39,7 +39,7 @@ export const LoginPage = () => {
           align="middle"
           justify="center"
         >
-          <img style={{ height: '40px' }} src={logo} alt="Logo" />
+          <img style={{ height: '40px' }} src={ReactIcon} alt="Logo" />
         </Row>
 
         <Form.Item

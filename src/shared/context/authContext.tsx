@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const verifyUserSession = async () => {
-      const token = localStorage.getItem('FSGR-userToken');
+      const token = localStorage.getItem('userToken');
       setIsAuthenticated(!!token);
       setIsInitialized(true);
     };
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const signIn = () => {
     setIsAuthLoading(true);
-    localStorage.setItem('FSGR-userToken', 'xxx');
+    localStorage.setItem('userToken', 'xxx');
     setTimeout(() => {
       setIsAuthenticated(true);
       setIsAuthLoading(false);
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const logout = () => {
-    localStorage.removeItem('FSGR-userToken');
+    localStorage.removeItem('userToken');
     setIsAuthenticated(false);
     location.reload();
   };
